@@ -1,3 +1,4 @@
+// Générateur de note aléatoire
 function generateurNote() {
     min = Math.ceil(0) // Valeur minimum qui est inclue
     max = Math.floor(21) // Valeur maximum qui est exclue

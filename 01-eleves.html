@@ -69,19 +69,21 @@
 
 
         <script type="text/javascript">
+            // Les objets élèves sont rangés dans groupeEleves
             let groupeEleves = [];
+            // Création des élèves
             let pierre = new Eleve('Dupond', 'Pierre', 'Kercode')
             let marie = new Eleve('Fontaine', 'Marie', 'CDA')
             let john = new Eleve('Hunter', 'John', 'Kercode')
-
+            // Pour mettre les élèves dans le tableau groupeEleves
             groupeEleves.push(pierre, marie, john)
 
             console.log("Prénom de pierreDupont:", pierre.prenom)
             console.log("Classe de marieFontiane:", marie.classe)
-
+            // Rentrer des notes dans le tableau maths dans eleve.js
             marie.notes.maths.push(11)
             john.notes.maths.push(17)
-
+            // Pour rentrer une note aléatoire dans le tableau algorithmique de chaque élève
             for (let i = 0; i < groupeEleves.length; i++) {
                 groupeEleves[i].notes.algorithmique.push(generateurNote())
                 console.log(`La note algorithmique de ${groupeEleves[i].prenom} est ${groupeEleves[i].notes.algorithmique}`)
@@ -89,7 +91,7 @@
 
             let somme = 0
             let moyenneAlgorithimique = 0
-
+            // Calculer la moyenne algorithmique de tout les élèves additionner
             for (let i = 0; i < groupeEleves.length; i++) {
                 somme += parseFloat(groupeEleves[i].notes.algorithmique)
             }
