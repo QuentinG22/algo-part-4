@@ -14,13 +14,11 @@ class Eleve {
     }
     ajouterNoteAlgorithmique(laNoteAlgo) {
         this.notes.algorithmique.push(laNoteAlgo)
-        console.log(`Note d'algorithmique ajoutée: ${laNoteAlgo}`)
     }
-    ajouterNoteJavaScript(laNote) {
-        this.notes.JavaScript.push(laNote)
-        console.log(`Note JavaScript ajoutée: ${laNote}`)
+    ajouterNoteJavaScript(laNoteJavaScript) {
+        this.notes.JavaScript.push(laNoteJavaScript)
     }
-    ajouterNote(matiere, tableau) {
+    ajouterMatiere(matiere, tableau) {
         this.notes[matiere] = tableau
         console.log(`Notes de ${matiere} ajoutées: ${tableau}`)
     }
