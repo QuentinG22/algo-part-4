@@ -1,70 +1,103 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exo d'Algo(Part 4) - #01 - Les élèves</title>
     <link href="./css/style.css" rel="stylesheet" />
     <!-- script type="text/javascript" src="./js/eleve.js"></script -->
+    <script type="text/javascript" src="./js/eleve.js"></script>
+    <script type="text/javascript" src="./js/tools.js"></script>
 </head>
+
 <body>
-<div class="card">
-    <p class="h6 font-weight-bold text-center">#01 - Les élèves</p>
-    <div class="instructions">
-        <p class="text-secondary">Le script que vous avez enregistré dans <em>eleve.js</em>(répertoire js) est inclus dans ce fichier html ; 
-            la classe (ou fonction de construction) que vous avez créé(e) est donc utilisble depuis ce fichier html.</p>
-        <ul class="text-secondary">
-            <li>Dans la zone encadrée par les balises &lt;script&gt; &lt;/script&gt;, écrire les instructions qui permettent :
-                <ul>
-                    <li>
-                        De créer les objets élèves pierreDupont, marieFontaine, johnHunter.<br>
-                        Vous leur attribuerez le nom et le prénom qui semblent en accord avec 
-                        le nom de la variable choisi pour les identifier.<br>
-                        Vous leur attribuerez la classe (Kercode, CDA, CDUI ou BTS SIO) de votre choix.<br>
-                        <p class="text-danger">Les objets élèves seront rangés dans le tableau du groupe des élèves, 
-                            déjà déclaré et défini.</p>
-                    </li>
-                    <li>
-                        De lire le prénom de l'objet pierreDupont et de l'afficher dans la console,
-                    </li>
-                    <li>
-                        De lire la classe de marieFontaine et de l'afficher dans la console,
-                    </li>
-                    <li>
-                        D'attribuer à marieFontaine et à johnHunter leur première note en maths,
-                    </li>
-                    <li>
-                        D'attribuer à tous les élèves connus leur première note en algorithmique.<br>
-                        L'attribution doit être faite de manière automatique par itération sur le groupe des élèves...
-                        (Ne voyez-vous pas une boucle là-dessous ?)<br>
-                        La note sera aléatoirement choisie entre 0 et 20 (indice : voir la méthode random 
-                        de l'objet global JavaScript Math)
-                    </li>
-                    <li>
-                        De calculer la moyenne en algorithmique de tous les élèves et de l'afficher dans la console
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Ouvrir la console (dans votre navigateur ou depuis le débugueur de VSCode) et recharger votre code.<br>
-                Pour rappel, les instructions ayant été écrites hors de toute fonction, sont exécutées au chargement de la page !!!
-                <p class="text-success">Tous les résultats devraient être dans la console !</p>
-                <p>N'hésitez pas à utiliser cette console pour interroger les objets, 
-                pour débuguer ou par curiosité.</p>
-            </li>
-        </ul>
-    </div>
+    <div class="card">
+        <p class="h6 font-weight-bold text-center">#01 - Les élèves</p>
+        <div class="instructions">
+            <p class="text-secondary">Le script que vous avez enregistré dans <em>eleve.js</em>(répertoire js) est
+                inclus dans ce fichier html ;
+                la classe (ou fonction de construction) que vous avez créé(e) est donc utilisble depuis ce fichier html.
+            </p>
+            <ul class="text-secondary">
+                <li>Dans la zone encadrée par les balises &lt;script&gt; &lt;/script&gt;, écrire les instructions qui
+                    permettent :
+                    <ul>
+                        <li>
+                            De créer les objets élèves pierreDupont, marieFontaine, johnHunter.<br>
+                            Vous leur attribuerez le nom et le prénom qui semblent en accord avec
+                            le nom de la variable choisi pour les identifier.<br>
+                            Vous leur attribuerez la classe (Kercode, CDA, CDUI ou BTS SIO) de votre choix.<br>
+                            <p class="text-danger">Les objets élèves seront rangés dans le tableau du groupe des élèves,
+                                déjà déclaré et défini.</p>
+                        </li>
+                        <li>
+                            De lire le prénom de l'objet pierreDupont et de l'afficher dans la console,
+                        </li>
+                        <li>
+                            De lire la classe de marieFontaine et de l'afficher dans la console,
+                        </li>
+                        <li>
+                            D'attribuer à marieFontaine et à johnHunter leur première note en maths,
+                        </li>
+                        <li>
+                            D'attribuer à tous les élèves connus leur première note en algorithmique.<br>
+                            L'attribution doit être faite de manière automatique par itération sur le groupe des
+                            élèves...
+                            (Ne voyez-vous pas une boucle là-dessous ?)<br>
+                            La note sera aléatoirement choisie entre 0 et 20 (indice : voir la méthode random
+                            de l'objet global JavaScript Math)
+                        </li>
+                        <li>
+                            De calculer la moyenne en algorithmique de tous les élèves et de l'afficher dans la console
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    Ouvrir la console (dans votre navigateur ou depuis le débugueur de VSCode) et recharger votre
+                    code.<br>
+                    Pour rappel, les instructions ayant été écrites hors de toute fonction, sont exécutées au chargement
+                    de la page !!!
+                    <p class="text-success">Tous les résultats devraient être dans la console !</p>
+                    <p>N'hésitez pas à utiliser cette console pour interroger les objets,
+                        pour débuguer ou par curiosité.</p>
+                </li>
+            </ul>
+        </div>
 
-    
-<script type="text/javascript">
-    let groupeEleves = [];
 
-    // YOUR CODE HERE
-    
+        <script type="text/javascript">
+            let groupeEleves = [];
+            let pierre = new Eleve('Dupond', 'Pierre', 'Kercode')
+            let marie = new Eleve('Fontaine', 'Marie', 'CDA')
+            let john = new Eleve('Hunter', 'John', 'Kercode')
 
-</script>
+            groupeEleves.push(pierre, marie, john)
+
+            console.log("Prénom de pierreDupont:", pierre.prenom)
+            console.log("Classe de marieFontiane:", marie.classe)
+
+            marie.notes.maths.push(11)
+            john.notes.maths.push(17)
+
+            for (let i = 0; i < groupeEleves.length; i++) {
+                groupeEleves[i].notes.algorithmique.push(generateurNote())
+                console.log(`La note algorithmique de ${groupeEleves[i].prenom} est ${groupeEleves[i].notes.algorithmique}`)
+            }
+
+            let somme = 0
+            let moyenneAlgorithimique = 0
+
+            for (let i = 0; i < groupeEleves.length; i++) {
+                somme += parseFloat(groupeEleves[i].notes.algorithmique)
+            }
+            moyenneAlgorithimique = somme / groupeEleves.length
+
+            console.log(`la moyenne en algorithmique de tous les élèves est de ${moyenneAlgorithimique.toFixed(2)}`)
+
+        </script>
 </body>
-</html>
 
+</html>
