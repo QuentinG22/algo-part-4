@@ -88,14 +88,22 @@
                 groupeEleves[i].ajouterNoteAlgorithmique(generateurNote())
                 console.log(`La note algorithmique de ${groupeEleves[i].prenom} est ${groupeEleves[i].notes.algorithmique}`)
             }
+            //autre solution avec forEach:
 
+            // groupeEleve.forEach (eleve => {
+            //     eleve.ajouterNoteAlgorithmique(generateurNote())
+            // })
+
+            // Calcul de la moyenne de la classe groupeEleve avec plusieurs notes par élève
             let somme = 0
             let moyenneAlgorithmique = 0
             let nombreDeNote = 0
             for (let i = 0; i < groupeEleves.length; i++) {
-                for (let n = 0; n < groupeEleves[i].notes.algorithmique.length; n++) {
-                    somme += parseFloat(groupeEleves[i].notes.algorithmique[n])
-                    nombreDeNote += 1
+                if (groupeEleves[i].notes.algorithmique.length > 0) {
+                    for (let n = 0; n < groupeEleves[i].notes.algorithmique.length; n++) {
+                        somme += parseFloat(groupeEleves[i].notes.algorithmique[n])
+                        nombreDeNote++
+                    }
                 }
             }
             moyenneAlgorithmique = somme / nombreDeNote
@@ -113,6 +121,7 @@
                 groupeEleves[i].ajouterMatiere("Français")
             }
 
+            affichageTableau(marie.notes)
         </script>
 </body>
 
