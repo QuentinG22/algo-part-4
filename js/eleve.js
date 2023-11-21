@@ -18,8 +18,11 @@ class Eleve {
     ajouterNoteJavaScript(laNoteJavaScript) {
         this.notes.JavaScript.push(laNoteJavaScript)
     }
-    ajouterMatiere(matiere, tableau) {
-        this.notes[matiere] = tableau
-        console.log(`Notes de ${matiere} ajoutées: ${tableau}`)
+    ajouterMatiere(matiere) {
+        this.notes[matiere] = []
+        console.log(`La matière ${matiere} à été ajouter`)
+    }
+    ajouterNote(matiere, laNote) {
+        this.notes[matiere].push(laNote)
     }
 }

@@ -91,12 +91,14 @@
 
             let somme = 0
             let moyenneAlgorithmique = 0
-            // Calculer la moyenne algorithmique de tout les élèves additionner
+            let nombreDeNote = 0
             for (let i = 0; i < groupeEleves.length; i++) {
-                somme += parseFloat(groupeEleves[i].notes.algorithmique)
+                for (let n = 0; n < groupeEleves[i].notes.algorithmique.length; n++) {
+                    somme += parseFloat(groupeEleves[i].notes.algorithmique[n])
+                    nombreDeNote += 1
+                }
             }
-            moyenneAlgorithmique = somme / groupeEleves.length
-
+            moyenneAlgorithmique = somme / nombreDeNote
             console.log(`la moyenne de classe en algorithmique est de ${moyenneAlgorithmique.toFixed(2)}`)
 
             // Afficher la phrase prédéfini dans eleve.js
@@ -108,7 +110,7 @@
              * avec la méthodes paramètrer dans eleve.js
              */
             for (let i = 0; i < groupeEleves.length; i++) {
-                groupeEleves[i].ajouterMatiere("Français", [])
+                groupeEleves[i].ajouterMatiere("Français")
             }
 
         </script>
